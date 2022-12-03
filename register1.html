@@ -4,41 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">.
     <title>RegisterForm</title>
     
     <style>
 
-    body{
-    color:  #fff;
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(hands-in-a-digital-universe-background.jpg) no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: sans-serif;
+    * {
+     box-sizing: border-box;
     }
 
-    body { 
+
+    body{
     color:  #fff;
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3));
-    background-image: url(hands-in-a-digital-universe-background.jpg);
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(hands-in-a-digital-universe-background.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
     font-family: sans-serif;
-    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     }
+
+   
 
     form {
     position: absolute;
     top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	background: rgba(0,0,0,.7);
+	background: rgba(0, 0, 0, 0.281);
     }
 
 
     h1 {
-    margin: 100px 100px;
+    margin: 50px 50px;
 	padding: 0;
 	text-align: center;
 	color: #fff;
@@ -46,20 +48,58 @@
     }
    
     button {
-    display: block;
-    width: 100%;
-    padding: 8px 10px;
-    border: 0;
-    background-color: #9291db;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 16px;
+    margin-left: 25%;
+    margin-top: 2%;
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, rgb(243, 123, 243), rgb(125, 205, 230), rgb(157, 98, 175), violet, rgb(114, 86, 160), rgb(73, 73, 179), rgb(127, 174, 189));
+    background-size: 400%;
+    border-radius: 30px;
+    transform: translate(0%, -50%);
     }
 
 
     button:hover {
 	background: #ecabe4;
+    animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate{
+    0% {
+    background-position: 0%;
+    }
+    100% {
+    background-position: 400%;
+    }
+    }
+
+    button:before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(45deg, #e37cec, #d16bb8, #5db8ec);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+    }
+
+    button:hover:before{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
     }
 
     a {
@@ -104,13 +144,18 @@
     font-weight: bold
     }
 
+    .checkbox {
+    margin-top: 15%;
+    }
+
     </style>
 </head>
 <body>
-    <h1>Register Form</h1>
     <form>
+        <h1>Register Form</h1>
     <fieldset>
         <p class="name">Please fill out the forms!</p>
+        
         <legend>User Info</legend>
             <label for="firstname"><input type="text" id="firstname" placeholder="Enter your firstname" required> Firstname</label>
             <p>
@@ -148,13 +193,15 @@
                     <option value="Taraz">Taraz</option>
                 </select>
     </fieldset>
+    <fieldset>
+            <p>
+            <button type="submit" formaction="https://s1tora.github.io/Home-work/authorization.html">Sign up</button>
+            <p>
+            <label><input class="checkbox" type="checkbox" checked="checked" name="remember"> Remember me</label>
+            <p>
+            <p>Already have an account? <a href="https://s1tora.github.io/Home-work/authorization.html">Sign in</a></p>
+            </form>
+    </fieldset>    
         
-       
-        <button type="submit" formaction="https://s1tora.github.io/Home-work/authorization.html">Sign up</button>
-        <p>
-        <label><input class="checkbox" type="checkbox" checked="checked" name="remember"> Remember me</label>
-        <p>
-        <p>Already have an account? <a href="https://s1tora.github.io/Home-work/authorization.html">Sign in</a></p>
-        </form>
 </body>
 </html>
