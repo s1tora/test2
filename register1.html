@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterForm</title>
+    
+    <style>
+
+    body{
+    color:  #fff;
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(hands-in-a-digital-universe-background.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    }
+
+    body { 
+    color:  #fff;
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3));
+    background-image: url(hands-in-a-digital-universe-background.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    
+    }
+
+    form {
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(0,0,0,.7);
+    }
+
+
+    h1 {
+    margin: 100px 100px;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+    }
+   
+    button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    border: 0;
+    background-color: #9291db;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    color: #fff;
+    }
+
+
+    button:hover {
+	background: #ecabe4;
+    }
+
+    a {
+	color: #fff;
+	text-decoration: none;
+	transition: .3s;
+    }
+
+    a:hover {
+	color: #ecabe4;
+    }
+
+    select {
+    position: relative;
+    display: block;
+    min-width: 220px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 0px;
+    }
+
+    select {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 14px 15px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(66, 67, 72, 0.8);
+    cursor: pointer;
+    }
+
+
+    .name {
+    text-align: center;
+    font-weight: bold
+    }
+
+    legend {
+    text-align: center;
+    font-weight: bold
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Register Form</h1>
+    <form>
+    <fieldset>
+        <p class="name">Please fill out the forms!</p>
+        <legend>User Info</legend>
+            <label for="firstname"><input type="text" id="firstname" placeholder="Enter your firstname" required> Firstname</label>
+            <p>
+            <label for="lastname"><input type="text" id="lastname" placeholder="Enter your lasttname" required> Lastname</label>
+            <p>
+            <label for="password"><input type="password" id="password" placeholder="Enter your password" required> Password</label>
+            <p>
+            <label for="email"><input type="email" id="email" placeholder="Enter your email" required> Email</label>
+            <p>
+            <label for="date">Enter your date of birth</label>
+                <input type="date" id="date of birth" name="date of birth" 
+                    value="2000-01-01"
+                    min="1950-01-01" max="2022-11-01">
+    </fieldset>
+    <fieldset>
+            <label for="phone">Enter your phone number:</label>
+
+            <input type="tel" id="phone" name="phone"
+            required>
+            <p>
+             <small>Format: 8 700 111 22 33</small>
+    </fieldset>
+    <fieldset>
+            <legend>Gender</legend>
+                <label for="male"><input type="radio" id="male" name="gender">Male</label>
+                <label for="female"><input type="radio" id="female" name="gender">Female</label>
+    </fieldset>
+    <fieldset>
+            <legend>City</legend>
+                <select name="city" id="city">
+                    <option value="astana">Astana</option>
+                    <option value="almaty">Almaty</option>
+                    <option value="Aktau">Aktau</option>
+                    <option value="Shymkent">Shymkent</option>
+                    <option value="Taraz">Taraz</option>
+                </select>
+    </fieldset>
+        
+       
+        <button type="submit" formaction="https://s1tora.github.io/Home-work/authorization.html">Sign up</button>
+        <p>
+        <label><input class="checkbox" type="checkbox" checked="checked" name="remember"> Remember me</label>
+        <p>
+        <p>Already have an account? <a href="https://s1tora.github.io/Home-work/authorization.html">Sign in</a></p>
+        </form>
+</body>
+</html>
