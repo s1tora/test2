@@ -15,44 +15,54 @@
 
 
     body{
-    color:  #fff;
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(hands-in-a-digital-universe-background.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: sans-serif;
+    color:  #fff; /* цвет текста всего сайта */
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(hands-in-a-digital-universe-background.jpg); /* заадний фон всего сайта */
+    -webkit-background-size: cover; /*размеры фонового изображения */
+    background-size: cover; /* задавать размер фонового изображения */ 
+    background-attachment: fixed; /* фиксация фона */ 
+    font-family: sans-serif; /* шрифт всего сайта */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: flex; /* элемент, к которому применяется свойство "флекс-бокс". вложенные в него элементы подчиняются правилам раскладки флексов */
+    justify-content: center; /*все элементы вне зависимости от их ширины имеют горизонтальное позиционирование по центру родительского контейнера */
+    align-items: center; /* вертикальное выравнивание всех дочерних элементов по центру родительского */
+    height: 100vh; /*высота вьюпорта, очень удобно для элементов, которые должны растягиваться на всю страницу */
     }
 
    
 
     form {
-    position: absolute;
+    position: absolute; /*указываем элементу, где ему быть и он прилипнет*/
     top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%); /*поворачивать, масштабировать, наклонять или сдвигать элемент.*/
 	background: rgba(0, 0, 0, 0.281);
+
+    padding: 7px; /*внутренние отступы от границ элемента до его содержимого*/
+	
+	color: #fff;
+	font-size: 20px; /*размер шрифта*/
+	background: none;
+	outline: none; /*стиль для внешней границы*/
+	border: 1px solid #fff; /* стилизации границ (рамки) вокруг элемента*/
+	box-sizing: border-box; /*все элементы не будут добавлять внутренние отступы и границы к итоговой ширине*/
     }
 
 
     h1 {
-    margin: 50px 50px;
+    margin: 20px 20px; /* внешний отступ на всех четырёх сторонах элемента*/
 	padding: 0;
-	text-align: center;
+	text-align: center; /*выравнивание текста*/
 	color: #fff;
 	font-size: 30px;
+    text-transform: uppercase; /*весь текст заглавными буквами*/
     }
    
     button {
+    margin: 20px 20px; 
     margin-left: 25%;
-    margin-top: 2%;
     position: absolute;
     width: 150px;
-    height: 45px;
+    height: 45px; /*высота элемента*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,12 +74,13 @@
     background-size: 400%;
     border-radius: 30px;
     transform: translate(0%, -50%);
+    cursor: pointer; /*курсор*/
     }
 
 
     button:hover {
 	background: #ecabe4;
-    animation: animate 8s linear infinite;
+    animation: animate 8s linear infinite; /*воспроизведение анимации*/
     }
 
     @keyframes animate{
@@ -80,6 +91,8 @@
     background-position: 400%;
     }
     }
+
+/*Псевдоклассы, псевдоэлементы*/
 
     button:before{
     content: "";
@@ -101,6 +114,8 @@
     opacity: 1;
     animation: animate 8s linear infinite;
     }
+
+/* ... */
 
     a {
 	color: #fff;
@@ -139,6 +154,7 @@
     font-weight: bold
     }
 
+ /*Селекторы*/
     legend {
     text-align: center;
     font-weight: bold
@@ -146,6 +162,30 @@
 
     .checkbox {
     margin-top: 15%;
+    }
+
+    #user {
+    text-transform: uppercase;
+    }
+/* ... */ 
+
+/*Combinators*/
+
+    fieldset legend { /*Desendant selector*/
+    color: #3324c0;
+    }
+
+    .gender>label { /*Direct Child selector*/
+    color: #fa5bed;
+    }
+
+    .gendername+label { /*Adjacent Sibling selector*/
+    color: #376bdb;    
+    }
+
+    button~div { /*General selector*/
+    background-color: #3f1d361c;
+    
     }
 
     </style>
@@ -156,7 +196,7 @@
     <fieldset>
         <p class="name">Please fill out the forms!</p>
         
-        <legend>User Info</legend>
+        <legend id="user">User Info</legend>
             <label for="firstname"><input type="text" id="firstname" placeholder="Enter your firstname" required> Firstname</label>
             <p>
             <label for="lastname"><input type="text" id="lastname" placeholder="Enter your lasttname" required> Lastname</label>
@@ -178,8 +218,8 @@
             <p>
              <small>Format: 8 700 111 22 33</small>
     </fieldset>
-    <fieldset>
-            <legend>Gender</legend>
+    <fieldset class="gender">
+            <legend class="gendername">Gender</legend>
                 <label for="male"><input type="radio" id="male" name="gender">Male</label>
                 <label for="female"><input type="radio" id="female" name="gender">Female</label>
     </fieldset>
@@ -193,14 +233,17 @@
                     <option value="Taraz">Taraz</option>
                 </select>
     </fieldset>
-    <fieldset>
-            <p>
+    <fieldset class="entry">
+            
             <button type="submit" formaction="https://s1tora.github.io/Home-work/authorization.html">Sign up</button>
-            <p>
+            
+           
+            </form>
+            <div>
             <label><input class="checkbox" type="checkbox" checked="checked" name="remember"> Remember me</label>
             <p>
             <p>Already have an account? <a href="https://s1tora.github.io/Home-work/authorization.html">Sign in</a></p>
-            </form>
+            </div>
     </fieldset>    
         
 </body>
