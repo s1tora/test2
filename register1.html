@@ -9,14 +9,11 @@
     
     <style>
 
-    * {
-     box-sizing: border-box;
-    }
-
+    /* Подключение internal */
 
     body{
     color:  #fff; /* цвет текста всего сайта */
-    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(hands-in-a-digital-universe-background.jpg); /* заадний фон всего сайта */
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(bg/hands-in-a-digital-universe-background.jpg); /* заадний фон всего сайта */
     -webkit-background-size: cover; /*размеры фонового изображения */
     background-size: cover; /* задавать размер фонового изображения */ 
     background-attachment: fixed; /* фиксация фона */ 
@@ -52,11 +49,16 @@
 	color: #fff;
 	font-size: 30px;
     text-transform: uppercase; /*весь текст заглавными буквами*/
+    font-weight: 600;
+    color: #fdfdfe;
+    text-shadow: 0px 0px 5px #b275da, 0px 0px 10px #b174d4, 0px 0px 10px #aa52b6,
+    0px 0px 20px #a95cf1;
+    text-transform: uppercase;
     }
    
     button {
     margin: 20px 20px; 
-    margin-left: 25%;
+    margin-left: 27%;
     position: absolute;
     width: 150px;
     height: 45px; /*высота элемента*/
@@ -67,7 +69,7 @@
     font-size: 20px;
     text-decoration: none;
     font-family: sans-serif;
-    background: linear-gradient(90deg, rgb(243, 81, 243), rgb(93, 207, 241), rgb(213, 113, 243), rgb(236, 68, 186), rgb(95, 49, 170), rgb(61, 61, 236), rgb(127, 174, 189));
+    background: linear-gradient(90deg, rgb(243, 81, 243), rgb(93, 207, 241), rgb(213, 113, 243), rgb(247, 83, 247), rgb(137, 85, 219), rgb(61, 61, 236), rgb(127, 174, 189));
     background-size: 400%;
     border-radius: 30px;
     transform: translate(0%, -50%);
